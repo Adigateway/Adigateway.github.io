@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Source material, not part of the published site
+images/
+Tasks/
+aditya_matlab/

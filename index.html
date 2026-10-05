@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aditya Srivatsa</title>
+  <meta name="description" content="Aditya Srivatsa: B.Eng Robotics student at THWS. Machine learning, computer vision and robotics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Hide the page until German text is applied, so English doesn't flash first (failsafe after 2 s).
+    try { var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang");
+      if (l === "de") { document.documentElement.classList.add("i18n-pending"); setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2000); } } catch (e) {}
+  </script>
+</head>
+<body data-page="home">
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">AS</span>Aditya Srivatsa</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="pitch.html">Pitch</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hello">// hello, world</div>
+        <h1>I'm <span class="grad">Aditya Srivatsa</span></h1>
+        <p class="role">I'm in my <strong>7th semester of a Bachelor's in Robotics</strong> at <strong>THWS</strong> (Technische Hochschule Würzburg-Schweinfurt). I build machine-learning and computer-vision systems that run on real hardware.</p>
+        <div class="meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Schweinfurt, Germany</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>B.Eng Robotics · graduating March 2027</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Ex-intern, OTIS Berlin</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn primary" href="projects.html">See my projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="assets/resume/Aditya_Srivatsa_Resume.pdf" download>Download CV</a>
+          <a class="btn" href="https://github.com/Adigateway" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/aditya-srivatsa-adiraju-377916280/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <figure class="portrait photo-slot tall" data-hint="Your portrait goes here&#10;assets/photos/portrait.jpg">
+        <img src="assets/photos/portrait.jpg" alt="Portrait of Aditya Srivatsa">
+        <div class="badge"><b>Machine Learning &amp; Robotics Engineer</b>ROS2 · Computer Vision · Embedded</div>
+      </figure>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-count="96" data-suffix="%">96%</div><div class="lbl">Fault-diagnosis accuracy on the CAN-bus ML pipeline I built at OTIS</div></div>
+      <div class="stat"><div class="num">7th</div><div class="lbl">Semester, B.Eng Robotics at THWS</div></div>
+      <div class="stat"><div class="num" data-count="4">4</div><div class="lbl">CCTV cameras fused into one top-down tracker for Sentics GmbH</div></div>
+      <div class="stat"><div class="num" data-count="5">5</div><div class="lbl">Languages: English, German, Telugu, Hindi, Spanish</div></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About me</div>
+        <h2 class="section-title">ML for machines that move</h2>
+        <p>I like problems where <strong>software meets the physical world</strong>: a camera watching a warehouse floor, an ultrasonic sensor on a car bumper, the CAN bus inside an elevator. Most of my work applies machine learning and data to electromechanical systems, and I've used <strong>ROS2</strong> hands-on.</p>
+        <p>At <strong>OTIS Lead Design Center in Berlin</strong> I led an ML pipeline that reads CAN-bus traces and finds the root cause of elevator faults. It was the first time the team had tried this approach. It reached <strong>96% diagnostic accuracy</strong> and uses SHAP so engineers can see <em>why</em> the model made each call.</p>
+        <p>Outside the lab I'm an active member of <strong>Werkraum</strong>, the THWS start-up community. I pitched my collision-warning retrofit there at Campus Startup Night 2024.</p>
+        <div class="chips" style="margin-top:20px">
+          <span class="chip">Machine Learning</span><span class="chip">Statistics</span><span class="chip">Control Systems</span>
+          <span class="chip">Image Processing</span><span class="chip">Electronics</span><span class="chip">Embedded Systems</span>
+          <span class="chip">Software Engineering</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="eyebrow">Experience</div>
+        <a class="exp-feature" href="experience.html">
+          <figure class="photo-slot wide" data-hint="assets/photos/otis-office.jpg">
+            <img src="assets/photos/otis-office.jpg" alt="OTIS Lead Design Center building in Berlin">
+          </figure>
+          <div class="exp-meta">
+            <span class="tl-when">Aug 2025 – Jan 2026 · Berlin</span>
+            <h3>Intern, E&amp;E Engineering · OTIS Lead Design Center</h3>
+            <p>Built a machine-learning pipeline that reads elevator CAN-bus traces and finds the root cause of faults. It reached 96% diagnostic accuracy, with SHAP explanations for every prediction.</p>
+            <span class="arrow">Read about the CAN-trace project →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <div class="explore reveal">
+      <a href="experience.html"><span class="k">01</span><span class="t">Experience</span><span class="d">OTIS · CAN-trace root-cause ML</span><span class="arrow">→</span></a>
+      <a href="pitch.html"><span class="k">02</span><span class="t">Startup Pitch</span><span class="d">Campus Startup Night · Werkraum</span><span class="arrow">→</span></a>
+      <a href="projects.html"><span class="k">03</span><span class="t">Projects</span><span class="d">Vision, sensor fusion, quant ML</span><span class="arrow">→</span></a>
+      <a href="skills.html"><span class="k">04</span><span class="t">Skills</span><span class="d">Languages, frameworks, tools</span><span class="arrow">→</span></a>
+      <a href="resume.html"><span class="k">05</span><span class="t">Resume</span><span class="d">Read or download the CV</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <h2>Let's build something.</h2>
+        <p>Open to working-student roles, internships and thesis projects in ML, computer vision and robotics.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:adigateway@gmail.com">adigateway@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/aditya-srivatsa-adiraju-377916280/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Adigateway" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Adiraju Aditya Srivatsa</span>
+      <span>Schweinfurt, Germany</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/i18n-de.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

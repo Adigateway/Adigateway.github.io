@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience · Aditya Srivatsa</title>
+  <meta name="description" content="Aditya Srivatsa at OTIS Lead Design Center Berlin: ML root-cause detection from elevator CAN-bus traces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Hide the page until German text is applied, so English doesn't flash first (failsafe after 2 s).
+    try { var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang");
+      if (l === "de") { document.documentElement.classList.add("i18n-pending"); setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2000); } } catch (e) {}
+  </script>
+</head>
+<body data-page="experience">
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">AS</span>Aditya Srivatsa</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="pitch.html">Pitch</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header class="page-head">
+  <div class="container">
+    <div class="eyebrow">Experience</div>
+    <h1>OTIS Lead Design Center, Berlin</h1>
+    <p class="section-lead">Intern, E&amp;E Engineering · August 2025 – January 2026. I led the development of a machine-learning pipeline that finds the root cause of elevator faults from CAN-bus traces. It was a first-of-its-kind approach within the team.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="glance">
+      <div><b>96%</b><span>diagnostic accuracy</span></div>
+      <div><b>CAN-bus traces</b><span>input data</span></div>
+      <div><b>Gradient boosting</b><span>HistGradientBoosting classifier</span></div>
+      <div><b>SHAP</b><span>explainable predictions</span></div>
+    </div>
+
+    <div class="media-grid reveal">
+      <figure class="media">
+        <img src="assets/photos/otis-office.jpg" alt="The OTIS office building in Berlin" style="aspect-ratio:16/10; object-fit:cover">
+        <figcaption>OTIS in Berlin.</figcaption>
+      </figure>
+      <figure class="media">
+        <img src="assets/photos/otis-lobby.jpg" alt="OTIS logo in the lobby on the 4th floor" style="aspect-ratio:16/10; object-fit:cover; object-position:center 45%">
+        <figcaption>4th floor, Lead Design Center.</figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-body">
+      <div>
+        <h4>The problem</h4>
+        <p>An elevator's electronic modules talk to each other over a <strong>CAN bus</strong>. When a fault happens, the recorded traffic, the <strong>CAN trace</strong>, holds the evidence of what went wrong. But traces are long and dense, and working out the root cause by hand takes an experienced engineer a lot of time.</p>
+        <p>My job was to see whether machine learning could do that first diagnosis automatically. Nobody on the team had tried it before.</p>
+
+        <h4>What I built</h4>
+        <ul>
+          <li>An end-to-end <strong>ML pipeline</strong> that turns raw CAN-trace data into features and classifies the <strong>root cause</strong> of a fault.</li>
+          <li>A <strong>HistGradientBoosting</strong> model. It's fast on large tabular datasets and handles missing values natively, which suits messy real-world trace data.</li>
+          <li><strong>SHAP explanations</strong> for every prediction, so engineers from other disciplines can see <em>which signals</em> drove each diagnosis and decide whether to trust it.</li>
+          <li>I used GenAI tools to speed up coding and testing.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Results</h4>
+        <ul>
+          <li><strong>96% diagnostic accuracy</strong> on root-cause detection.</li>
+          <li>Less time spent on manual fault analysis.</li>
+          <li>I presented the results and a <strong>proposal for integrating the pipeline into OTIS's predictive-maintenance platform</strong>, including ideas for scaling it further.</li>
+        </ul>
+
+        <h4>Firmware build automation</h4>
+        <p>Alongside the ML work, I rewrote a <strong>shell-based firmware automation script in Python</strong>. It generates the HEX and LD files for firmware builds. The Python version made builds more reliable and the tooling easier to maintain.</p>
+
+        <h4>How I worked</h4>
+        <p>I led the project on my own from start to finish: planning, development, testing and the final presentation, in an agile-style workflow.</p>
+        <div class="callout">The code and data belong to OTIS, so this page describes the approach rather than the implementation.</div>
+      </div>
+    </div>
+
+    <figure class="figure reveal">
+      <div class="frame diagram-scroll">
+        <svg class="diagram" viewBox="0 0 960 180" role="img" aria-label="Pipeline: CAN trace, parse and decode, feature engineering, HistGradientBoosting, root cause with SHAP explanation, engineer review">
+          <defs><marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4a4a4a"/></marker></defs>
+          <g font-size="13">
+            <rect class="box" x="4" y="36" width="136" height="84" rx="10"/><text x="72" y="72" text-anchor="middle">CAN trace</text><text x="72" y="92" text-anchor="middle" class="t2" font-size="11">recorded bus traffic</text>
+            <rect class="box" x="164" y="36" width="136" height="84" rx="10"/><text x="232" y="72" text-anchor="middle">Parse &amp; decode</text><text x="232" y="92" text-anchor="middle" class="t2" font-size="11">messages → signals</text>
+            <rect class="box" x="324" y="36" width="136" height="84" rx="10"/><text x="392" y="72" text-anchor="middle">Features</text><text x="392" y="92" text-anchor="middle" class="t2" font-size="11">per fault event</text>
+            <rect class="box-a" x="484" y="36" width="150" height="84" rx="10"/><text x="559" y="72" text-anchor="middle">HistGradient-</text><text x="559" y="90" text-anchor="middle">Boosting</text><text x="559" y="108" text-anchor="middle" class="t2" font-size="11">root-cause class</text>
+            <rect class="box" x="658" y="36" width="136" height="84" rx="10"/><text x="726" y="72" text-anchor="middle">SHAP</text><text x="726" y="92" text-anchor="middle" class="t2" font-size="11">why this cause?</text>
+            <rect class="box" x="818" y="36" width="138" height="84" rx="10"/><text x="887" y="72" text-anchor="middle">Engineer</text><text x="887" y="92" text-anchor="middle" class="t2" font-size="11">faster diagnosis</text>
+          </g>
+          <g class="wire" marker-end="url(#arrO)"><path d="M140 78H162"/><path d="M300 78H322"/><path d="M460 78H482"/><path d="M634 78H656"/><path d="M794 78H816"/></g>
+          <text x="480" y="160" text-anchor="middle" class="t3" font-size="12">From raw bus traffic to an explained root-cause diagnosis</text>
+        </svg>
+      </div>
+    </figure>
+
+    <nav class="pager">
+      <a href="index.html"><span>← Back</span><b>Home</b></a>
+      <a href="pitch.html"><span>Next →</span><b>Startup Pitch</b></a>
+    </nav>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <h2>Let's build something.</h2>
+        <p>Open to working-student roles, internships and thesis projects in ML, computer vision and robotics.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:adigateway@gmail.com">adigateway@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/aditya-srivatsa-adiraju-377916280/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Adigateway" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Adiraju Aditya Srivatsa</span>
+      <span>Schweinfurt, Germany</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/i18n-de.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

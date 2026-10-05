@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obstacle-Avoidance Car · Aditya Srivatsa</title>
+  <meta name="description" content="An autonomous robot car that senses obstacles and steers around them on its own.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Hide the page until German text is applied, so English doesn't flash first (failsafe after 2 s).
+    try { var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang");
+      if (l === "de") { document.documentElement.classList.add("i18n-pending"); setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2000); } } catch (e) {}
+  </script>
+</head>
+<body data-page="projects">
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">AS</span>Aditya Srivatsa</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="pitch.html">Pitch</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section style="padding-top:72px">
+  <div class="container">
+    <a href="projects.html" class="chip" style="text-decoration:none; margin-bottom:40px">← All projects</a>
+    <article class="project" id="p-car">
+      <div class="proj-head" style="margin-top:0">
+        <div>
+          <div class="idx">06 / Robotics · Embedded</div>
+          <h1>Autonomous Obstacle-Avoidance Car</h1>
+          <p class="sub">An autonomous car built on an <strong>Arduino Uno</strong>. It uses object-detection sensors to spot obstacles and steers around them on its own, and it can also be driven remotely from a <strong>custom app</strong>. Presented at Vision Engineering Fest.</p>
+        </div>
+        <div class="links-row">
+          <a class="btn" href="https://www.youtube.com/watch?v=PZ7Ij6uXr4w" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
+      </div>
+
+      <div class="glance">
+        <div><b>Arduino Uno</b><span>main controller</span></div>
+        <div><b>HC-SR04</b><span>ultrasonic obstacle sensing</span></div>
+        <div><b>Servo mount</b><span>lets the sensor look around</span></div>
+        <div><b>Bluetooth</b><span>remote control via custom app</span></div>
+      </div>
+
+      <div class="media-grid reveal" style="grid-template-columns:1fr 1.5fr">
+        <figure class="media">
+          <img src="assets/photos/car.jpg" alt="The obstacle-avoidance car: Arduino Uno with motor-driver shield, HC-SR04 ultrasonic sensor on a servo, and a Bluetooth module on an acrylic chassis">
+          <figcaption>Arduino Uno + motor-driver shield, HC-SR04 on a servo, Bluetooth module on an acrylic chassis.</figcaption>
+        </figure>
+        <figure class="media">
+          <div class="video-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/PZ7Ij6uXr4w" title="Autonomous obstacle-avoidance car, Vision Engineering Fest" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption>Full walkthrough of the car, presented at Vision Engineering Fest.</figcaption>
+        </figure>
+      </div>
+
+      <div class="proj-body">
+        <div>
+          <h4>How it works</h4>
+          <p>The car runs a simple <strong>sense → decide → act</strong> loop on the Arduino Uno:</p>
+          <ul>
+            <li><strong>Sense:</strong> the HC-SR04 ultrasonic sensor measures the distance to whatever is in front of the car.</li>
+            <li><strong>Decide:</strong> when an obstacle comes too close, the car stops. The sensor sits on a servo, so it can turn to check the sides and find a clear direction.</li>
+            <li><strong>Act:</strong> the motor-driver shield drives the wheels to steer away from the obstacle and carry on, so the car moves smoothly without collisions.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Remote control</h4>
+          <p>Besides driving itself, the car can be <strong>remote controlled from a custom app</strong>. A Bluetooth module on the chassis receives the commands from the app.</p>
+
+        </div>
+      </div>
+    </article>
+    <nav class="pager"><a href="project-stock-alpha.html"><span>← Previous</span><b>Stock Alpha</b></a><a href="projects.html"><span>Back →</span><b>All projects</b></a></nav>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <h2>Let's build something.</h2>
+        <p>Open to working-student roles, internships and thesis projects in ML, computer vision and robotics.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:adigateway@gmail.com">adigateway@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/aditya-srivatsa-adiraju-377916280/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Adigateway" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Adiraju Aditya Srivatsa</span>
+      <span>Schweinfurt, Germany</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/i18n-de.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
